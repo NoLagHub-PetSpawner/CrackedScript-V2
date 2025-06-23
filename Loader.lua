@@ -356,8 +356,8 @@ spawn(function()
 			0,
 			false
 		)
-		local TweenGoalOfMainFrameUIStroke = {Rotation = UIGradient.Rotation + 360}
-		local t = TweenService:Create(UIGradient, TweenInfoMainFrameUIStroke, TweenGoalOfMainFrameUIStroke)
+		local TweenGoalOfMainFrameUIStroke = {Rotation = UIGradient2.Rotation + 360}
+		local t = TweenService:Create(UIGradient2, TweenInfoMainFrameUIStroke, TweenGoalOfMainFrameUIStroke)
 		t:Play()
 		t.Completed:Wait()
 	end
@@ -378,7 +378,7 @@ local function handler()
 		if UIStrokeOffirstSetItems then
 			UIStrokeOffirstSetItems.Transparency = 1
 		end
-		local TweenOffirstSetItems = TweenService:Create(firstSetItems, TweenInfo.new(0.5), {Transparency = 0})
+		local TweenOffirstSetItems = TweenService:Create(firstSetItems, TweenInfo.new(0.5), {TextTransparency = 0})
 		TweenOffirstSetItems:Play()
 		if UIStrokeOffirstSetItems then
 			local strokeTween = TweenService:Create(UIStrokeOffirstSetItems, TweenInfo.new(0.5), {Transparency = 0})
@@ -407,7 +407,7 @@ local function handler()
 	MainFrame.BackgroundTransparency = 1
 	UIStroke.Transparency = 1
 	UIStroke.Thickness = 1
-	UIGradient:Destroy()
+	UIGradient2:Destroy()
 	MainFrame.Size = MainFrameOriginalSize
 	local MainFrameFadeIn = TweenService:Create(MainFrame, TweenInfo.new(0.8), {BackgroundTransparency = 0})
 	MainFrameFadeIn:Play()
@@ -515,6 +515,9 @@ local function handler()
 		loadError = err
 	end)
 	MainFrame:Destroy()
+	local TweenFadeOutOfBlackScreen = TweenService:Create(BlackScreen, TweenInfo.new(0.5), {BackgroundTransparency = 1})
+	TweenFadeOutOfBlackScreen:Play()
+	TweenFadeOutOfBlackScreen.Completed:Wait()
 	BlackScreen:Destroy()
 end
 
