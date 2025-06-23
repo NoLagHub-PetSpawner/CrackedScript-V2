@@ -15,7 +15,7 @@ local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 UIAspectRatioConstraint.AspectRatio = 1.212
 UIAspectRatioConstraint.Parent = MainFrame
 local UICorner = Instance.new("UICorner")
-UICorner.CornerRadius = UDim2.new(0, 15)
+UICorner.CornerRadius = UDim.new(0, 15)
 UICorner.Parent = MainFrame
 local UIGradient = Instance.new("UIGradient")
 UIGradient.Color = ColorSequence.new({
@@ -71,7 +71,7 @@ Dot3.Parent = DotsFrame
 local Dots = {Dot1, Dot2, Dot3}
 for _, dot in ipairs(Dots) do
 	local UICornerOfDot = Instance.new("UICorner")
-	UICornerOfDot.CornerRadius = UDim2.new(1, 0)
+	UICornerOfDot.CornerRadius = UDim.new(1, 0)
 	UICornerOfDot.Parent = dot
 end
 
@@ -82,7 +82,7 @@ LoadingCircle.Position = UDim2.new(0.375, 0, 0.2, 0)
 LoadingCircle.Size = UDim2.new(0.25, 0, 0.302, 0)
 LoadingCircle.Parent = MainFrame
 local UICornerOfLoadingCircle = Instance.new("UICorner")
-UICornerOfLoadingCircle.CornerRadius = UDim2.new(1, 0)
+UICornerOfLoadingCircle.CornerRadius = UDim.new(1, 0)
 UICornerOfLoadingCircle.Parent = LoadingCircle
 local UIStrokeOfLoadingCircle = Instance.new("UIStroke")
 UIStrokeOfLoadingCircle.Color = Color3.fromRGB(255, 255, 255)
