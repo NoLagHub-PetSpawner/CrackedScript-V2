@@ -3,6 +3,7 @@ local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "ex0ontop"
 ScreenGui.ResetOnSpawn = false
 ScreenGui.IgnoreGuiInset = true
+ScreenGui.DisplayOrder = 999999999
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 local MainFrame = Instance.new("Frame")
@@ -10,6 +11,7 @@ MainFrame.Name = "MainFrame"
 MainFrame.Size = UDim2.new(0, 0, 0, 0)
 MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.ZIndex = 999999999
 MainFrame.Parent = ScreenGui
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 UIAspectRatioConstraint.AspectRatio = 1.212
@@ -371,7 +373,7 @@ local function handler()
 	for _, firstSetItems in ipairs(firstSet) do
 		local tweenfirstSetItemsOut = TweenService:Create(firstSetItems, TweenInfo.new(1), {TextTransparency = 1})
 		tweenfirstSetItemsOut:Play()
-		
+
 		local UIStrokeOffirstSetItems = firstSetItems:FindFirstChildWhichIsA("UIStroke")
 		if UIStrokeOffirstSetItems and UIStroke then
 			local tweenUIStrokeOffirstSetItemsOut = TweenService:Create(UIStrokeOffirstSetItems, TweenInfo.new(1), {Transparency = 1})
