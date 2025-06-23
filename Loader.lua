@@ -89,7 +89,7 @@ UIStrokeOfLoadingCircle.Color = Color3.fromRGB(255, 255, 255)
 UIStrokeOfLoadingCircle.Thickness = 1.5
 UIStrokeOfLoadingCircle.Parent = LoadingCircle
 local UIGradientOfUIStrokeOfLoadingCircle = Instance.new("UIGradient")
-UIGradientOfUIStrokeOfLoadingCircle.Transparency = 1
+UIGradientOfUIStrokeOfLoadingCircle.Transparency = NumberSequence.new(1)
 UIGradientOfUIStrokeOfLoadingCircle.Parent = UIStrokeOfLoadingCircle
 
 local Outline = Instance.new("Frame")
