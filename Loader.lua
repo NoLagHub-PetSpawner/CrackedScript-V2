@@ -8,8 +8,9 @@ ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 local BlackScreen = Instance.new("Frame")
 BlackScreen.Name = "BlackScreen"
+BlackScreen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 BlackScreen.Size = UDim2.new(1, 0, 1, 0)
-BlackScreen.ZIndex = 999999999
+BlackScreen.ZIndex = 999999998
 BlackScreen.Parent = ScreenGui
 
 local MainFrame = Instance.new("Frame")
@@ -17,7 +18,7 @@ MainFrame.Name = "MainFrame"
 MainFrame.Size = UDim2.new(0, 0, 0, 0)
 MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-MainFrame.ZIndex = 999999998
+MainFrame.ZIndex = 999999999
 MainFrame.Parent = ScreenGui
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 UIAspectRatioConstraint.AspectRatio = 1.212
