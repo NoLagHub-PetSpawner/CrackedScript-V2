@@ -10,7 +10,7 @@ local BlackScreen = Instance.new("Frame")
 BlackScreen.Name = "BlackScreen"
 BlackScreen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 BlackScreen.Size = UDim2.new(1, 0, 1, 0)
-BlackScreen.ZIndex = 999999998
+BlackScreen.ZIndex = 0
 BlackScreen.Parent = ScreenGui
 
 local MainFrame = Instance.new("Frame")
@@ -18,7 +18,7 @@ MainFrame.Name = "MainFrame"
 MainFrame.Size = UDim2.new(0, 0, 0, 0)
 MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-MainFrame.ZIndex = 999999999
+MainFrame.ZIndex = 1
 MainFrame.Parent = ScreenGui
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 UIAspectRatioConstraint.AspectRatio = 1.212
@@ -108,7 +108,7 @@ local Outline = Instance.new("Frame")
 Outline.Name = "Outline"
 Outline.BackgroundTransparency = 1
 Outline.Position = UDim2.new(0, 0, 0.11, 0)
-Outline.Size = UDim2.new(1, 0, 0.002, 0)
+Outline.Size = UDim2.new(1, 0, 0.001, 0)
 Outline.Parent = MainFrame
 
 local CloseButton = Instance.new("TextButton")
@@ -146,7 +146,7 @@ Header.Position = UDim2.new(0, 0, 0.032, 0)
 Header.Size = UDim2.new(0.8, 0, 0.052, 0)
 Header.Font = Enum.Font.GothamBold
 Header.RichText = true
-Header.Text = "No-Lag Hub x Dark Spawner| Version 1.0"
+Header.Text = "No-Lag Hub x Dark Spawner | Version 1.0"
 Header.TextScaled = true
 Header.TextColor3 = Color3.fromRGB(255, 255, 255)
 Header.TextTransparency = 1
@@ -223,6 +223,7 @@ ToS.Size = UDim2.new(0.8, 0, 0.18, 0)
 ToS.Font = Enum.Font.GothamBold
 ToS.RichText = true
 ToS.Text = "TO"
+ToS.TextColor3 = Color3.fromRGB(0, 0, 0)
 ToS.TextScaled = true
 ToS.TextTransparency = 1
 ToS.Parent = MainFrame
@@ -253,6 +254,7 @@ NLHS.Size = UDim2.new(0.8, 0, 0.18, 0)
 NLHS.Font = Enum.Font.GothamBold
 NLHS.RichText = true
 NLHS.Text = "NO-LAG HUB"
+NLHS.TextColor3 = Color3.fromRGB(0, 0, 0)
 NLHS.TextScaled = true
 NLHS.TextTransparency = 1
 NLHS.Parent = MainFrame
@@ -283,6 +285,7 @@ XS.Size = UDim2.new(0.8, 0, 0.1, 0)
 XS.Font = Enum.Font.GothamBold
 XS.RichText = true
 XS.Text = "X"
+XS.TextColor3 = Color3.fromRGB(0, 0, 0)
 XS.TextScaled = true
 XS.TextTransparency = 1
 XS.Parent = MainFrame
@@ -313,6 +316,7 @@ DSS.Size = UDim2.new(0.8, 0, 0.18, 0)
 DSS.Font = Enum.Font.GothamBold
 DSS.RichText = true
 DSS.Text = "DARK SPAWNER!"
+DSS.TextColor3 = Color3.fromRGB(0, 0, 0)
 DSS.TextScaled = true
 DSS.TextTransparency = 1
 DSS.Parent = MainFrame
@@ -373,11 +377,7 @@ local function handler()
 	Tween1.Completed:Wait()
 	task.wait(2)
 	for _, firstSetItems in ipairs(firstSet) do
-		firstSetItems.TextTransparency = 1
 		local UIStrokeOffirstSetItems = firstSetItems:FindFirstChildWhichIsA("UIStroke")
-		if UIStrokeOffirstSetItems then
-			UIStrokeOffirstSetItems.Transparency = 1
-		end
 		local TweenOffirstSetItems = TweenService:Create(firstSetItems, TweenInfo.new(0.5), {TextTransparency = 0})
 		TweenOffirstSetItems:Play()
 		if UIStrokeOffirstSetItems then
@@ -514,11 +514,10 @@ local function handler()
 		loadSuccess = success
 		loadError = err
 	end)
-	MainFrame:Destroy()
 	local TweenFadeOutOfBlackScreen = TweenService:Create(BlackScreen, TweenInfo.new(0.5), {BackgroundTransparency = 1})
 	TweenFadeOutOfBlackScreen:Play()
 	TweenFadeOutOfBlackScreen.Completed:Wait()
-	BlackScreen:Destroy()
+	ScreenGui:Destroy()
 end
 
 handler()
