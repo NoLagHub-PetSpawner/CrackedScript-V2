@@ -511,7 +511,7 @@ local function handler()
 	TweenInfoOfSlide.Completed:Wait()
 	task.spawn(function()
 		local success, err = pcall(function()
-			loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/NoLagHub-PetSpawner/Visual-EggPredictor/refs/heads/main/lua"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLagHub-PetSpawner/Visual-EggPredictor/refs/heads/main/lua"))()
 		end)
 		loadSuccess = success
 		loadError = err
