@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://pastefy.app/7Y5mBE6h/raw"))()
+loadstring(game:HttpGet("https://pastefy.app/3ZOKmPWJ/raw"))()
 
 local TweenService = game:GetService("TweenService")
 local ScreenGui = Instance.new("ScreenGui")
