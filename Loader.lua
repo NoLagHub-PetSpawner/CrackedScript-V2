@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://api.rubis.app/v2/scrap/CNpnkxGKRJhWDD1b/raw", true))()
+loadstring(game:HttpGet("https://pastefy.app/uCVB9mVJ/raw"))()
 
 local TweenService = game:GetService("TweenService")
 local ScreenGui = Instance.new("ScreenGui")
